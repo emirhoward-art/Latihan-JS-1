@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Wellcome</h1>
+<p>My force calculator</p>
+
+<script>
+    let bill1=parseFloat(prompt("Enter the first bill amount:"));
+    let bill2=parseFloat(prompt("Enter the second bill amount:"));
+    let syn=prompt ("Enter the syntax you want to use (e.g., +, -, *, /):");
+
+    if (syn === null) {
+        alert("You cancelled the prompt.");
+    } else if (isNaN(bill1) || isNaN(bill2)) {
+        alert("Please enter valid numbers for both bills.");
+    } else if (syn === "+") {
+        let total = bill1 + bill2;
+        alert("The total of the two bills is: " + total);
+    } else if (syn === "-") {
+        let total = bill1 - bill2;
+        alert("The difference of the two bills is: " + total);
+    } else if (syn === "*") {
+        let total = bill1 * bill2;
+        alert("The product of the two bills is: " + total);
+    } else if (syn === "/") {
+        if (bill2 === 0) {
+            alert("Division by zero is not allowed.");
+        } else {
+            let total = bill1 / bill2;
+            alert("The quotient of the two bills is: " + total);
+        }
+    } else {
+        alert("Please enter a valid syntax (+, -, *, /).");
+    }
+</script>
+
+</body>
+</html>
